@@ -27,12 +27,20 @@ void print(node* &head){
     cout<<endl;
 
 }
+void insertend(node* &tail, int d){
+    node* temp = new node(d);
+    tail->next = temp;
+    tail = temp;
+}
 int main()
 {
     node *node1 = new node(1);
     node* head = node1;
     print(head);
     insertnode(head,20);
+    insertnode(head,30);
+    insertnode(head,40);
+    insertnode(head,50);
     print(head);
     
 }
