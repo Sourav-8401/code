@@ -12,7 +12,7 @@ public:
     }
 
 };
-void insertnode(node* &head,int d){
+void inserthead(node* &head,int d){
     node* temp = new node(d);
     temp->next = head;
     head = temp;
@@ -32,15 +32,40 @@ void insertend(node* &tail, int d){
     tail->next = temp;
     tail = temp;
 }
+void givenposition(node* &head,int pos ,int d){
+    node* traverse = head;
+    if(pos ==1){
+        inserthead(head,d);
+        return;
+    }
+    int curr = 1;
+    while(curr<pos - 1){
+        traverse = traverse->next;
+        curr++;
+    }
+    node* temp = new node(d);
+    temp->next = traverse->next;
+    traverse->next = temp;
+
+}
 int main()
 {
     node *node1 = new node(1);
     node* head = node1;
+    node* tail = node1;
     print(head);
-    insertnode(head,20);
-    insertnode(head,30);
-    insertnode(head,40);
-    insertnode(head,50);
+    inserthead(head,20);
+    inserthead(head,30);
+    inserthead(head,40);
+    inserthead(head,50);
+    print(head);
+    insertend(tail, 25);
+    insertend(tail, 55);
+    insertend(tail, 28);
+    print(head);
+    givenposition(head,2,66);
+    print(head);
+    givenposition(head,10,63);
     print(head);
     
 }
