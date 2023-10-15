@@ -22,6 +22,7 @@ void print(node* &head){
         }
         cout<<endl;
     }
+void dee
  
 int main(){
     node* node1 = new node(10);

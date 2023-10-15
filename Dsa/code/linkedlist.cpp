@@ -10,6 +10,9 @@ public:
         this->data = data;
         this->next = NULL;
     }
+    ~node(){
+        
+    }
 
 };
 void inserthead(node* &head,int d){
@@ -43,11 +46,35 @@ void givenposition(node* &head,int pos ,int d){
         traverse = traverse->next;
         curr++;
     }
+    if(traverse->next == NULL){
+        insertend(head,d);
+    }
     node* temp = new node(d);
     temp->next = traverse->next;
     traverse->next = temp;
 
 }
+void deletenode(int pos, node* &head){
+    if(pos == 1){
+        node* temp = head;
+        head = head->next;
+        delete temp;
+    }
+    else{
+        node* prev = NULL;
+        node* curr = head;
+        int cnt = 1;
+        while(cnt<= pos - 1){
+            prev = curr;
+            curr = curr -> next;
+            cnt++;
+        }
+    prev->next = curr->next;
+    curr->next = NULL;
+    delete curr;
+    }
+}
+
 int main()
 {
     node *node1 = new node(1);

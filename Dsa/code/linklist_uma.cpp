@@ -51,7 +51,7 @@ void display(node* &head)
 int main()
 {
     node* head = NULL;
-    int data;
+    // int data;
     while (1)
     {
         int data;
