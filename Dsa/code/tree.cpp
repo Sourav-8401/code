@@ -15,7 +15,7 @@ public:
 class BStree
 {
 public:
-    node *insert(node *root, int data)
+    node* insert(node *root, int data)
     {
         if (root == NULL)
         {
