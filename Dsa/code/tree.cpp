@@ -90,25 +90,25 @@ public:
     // }
 
 };
-node* deletemax(node* &root){
-    if(root == NULL){
-        return NULL;
-    }
-    if(root->right == NULL){
-        return root->left;
-    }
-    root->right = deletemax(root->right);
-    return root;
+// node* deletemax(node* &root){
+//     if(root == NULL){
+//         return NULL;
+//     }
+//     if(root->right == NULL){
+//         return root->left;
+//     }
+//     root->right = deletemax(root->right);
+//     return root;
 
-}
-while(root->data != x){
-    if(n<root->data){
-        root->data=root->left;
-    }
-    else{
-        root->data=root->right;
-    }
-}
+// }
+// while(root->data != x){
+//     if(n<root->data){
+//         root->data=root->left;
+//     }
+//     else{
+//         root->data=root->right;
+//     }
+// }
 
 int main()
 {

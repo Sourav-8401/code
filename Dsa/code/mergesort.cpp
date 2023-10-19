@@ -37,17 +37,19 @@ void merge(int *arr,int s ,int  e){
     delete[] second;
 }
 void mergeSort(int *arr, int s, int e){
-    //base
+    //base case
     if(s >= e){
         return;
     }
+    else{
     int mid = (s + e)/2; 
     mergeSort(arr, s, mid);
     mergeSort(arr, mid+1, e);
     merge(arr, s, e);
+    }
 }
 int main(){
-    int arr[6] = {2,5,2, 1, 6, 9};
+    int arr[6] = {'n','a','w','n','q','c',};
     int n = 6;
     mergeSort(arr, 0, n-1);
     for(int i=0; i<n; i++){
