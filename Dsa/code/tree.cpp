@@ -58,8 +58,8 @@ public:
         {
             return;
         }
-        inorder(root->left);
-        inorder(root->right);
+        postorder(root->left);
+        postorder(root->right);
         cout << root->data << " ";
     }
     bool search(node *root, int check)
