@@ -1,0 +1,23 @@
+Q1:
+#include <iostream>
+using namespace std;
+class Custom {
+public:
+    int value;
+    Custom(int val) : value(val) {}
+    Custom operator++(int) {
+        Custom temp = *this;
+        value++;
+        return temp;
+    }
+};
+int main() {
+    Custom obj(3);
+    Custom result = obj++;
+    cout << result.value;
+    return 0;
+}
+what is *this?
+
+Q2:
+
