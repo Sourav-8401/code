@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Lenovo/Desktop/sem3/code/cpp/operator_overloding",
-      "program": "c:/Users/Lenovo/Desktop/sem3/code/cpp/operator_overloding/build/Debug/outDebug",
+      "cwd": "c:/Users/Lenovo/Desktop/sem3/code/cpp/constractor",
+      "program": "c:/Users/Lenovo/Desktop/sem3/code/cpp/constractor/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
