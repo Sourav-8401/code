@@ -7,7 +7,7 @@ void swap(int* a, int* b){
 }
 void maxheap(int a[], int n, int i){
     int largest = i;
-    int l = 2*i +1;
+    int l = 2*i + 1;
     int r = 2*i + 2;
     if(l<n && a[l] > a[largest]){
         largest = l;
@@ -50,7 +50,7 @@ void buildheapmax(int a[], int n){
 }
 int main(){
     // int a[] = {10,5,15,20};
-    int a[] = {2,4,1,5,9};
+    int a[] = {10, 5, 15, 2, 20, 30};
     int n = sizeof(a) / sizeof(a[0]);
     for(int i = 0; i<n; i++){
         cout<<a[i]<<" ";

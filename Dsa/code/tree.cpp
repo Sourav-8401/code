@@ -15,7 +15,7 @@ public:
 class BStree
 {
 public:
-    node* insert(node *root, int data)
+    node *insert(node *root, int data)
     {
         if (root == NULL)
         {
@@ -81,34 +81,34 @@ public:
             return search(root->right, check);
         }
     }
-    // int findmax(root){
-    //     if()
-    //     while(root->right!=NULL){
-    //         root = root->right;
-    //     }
+    int findmax(node *root)
+    {
+        if (root == NULL)
+        {
+            return root->data;
+        }
+        while (root->right != NULL)
+        {
+            root = root->right;
+        }
+    }
+    node* deletenode(node* root, int val){
+        if(root==NULL){
+            return root;
+        }
+        if(root->data==val){
 
-    // }
-
+        }
+        else if(val<root->data){
+            root->left = deletenode(root->left,val);
+            return root;
+        }
+        else{
+            root->right = deletenode(root->right,val);
+            return root;
+        }
+    }
 };
-// node* deletemax(node* &root){
-//     if(root == NULL){
-//         return NULL;
-//     }
-//     if(root->right == NULL){
-//         return root->left;
-//     }
-//     root->right = deletemax(root->right);
-//     return root;
-
-// }
-// while(root->data != x){
-//     if(n<root->data){
-//         root->data=root->left;
-//     }
-//     else{
-//         root->data=root->right;
-//     }
-// }
 
 int main()
 {

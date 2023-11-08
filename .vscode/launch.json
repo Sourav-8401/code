@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Lenovo/Desktop/sem3/code/cpp/constractor",
-      "program": "c:/Users/Lenovo/Desktop/sem3/code/cpp/constractor/build/Debug/outDebug",
+      "cwd": "c:/Users/Lenovo/Desktop/sem3/code/Dsa/code",
+      "program": "c:/Users/Lenovo/Desktop/sem3/code/Dsa/code/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
