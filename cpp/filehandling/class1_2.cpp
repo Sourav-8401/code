@@ -38,8 +38,8 @@ int main()
 using namespace std;
 int main(){
 fstream my_file,my_file2;
-my_file.open("Amrit",ios::in);
-my_file2.open("Amrit2",ios::out);
+my_file.open("class1.txt",ios::in);
+my_file2.open("Amrit2.txt",ios::out);
 if(!my_file){
 cout<<"Error";
 }
