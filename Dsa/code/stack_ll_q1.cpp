@@ -43,7 +43,8 @@ void deleteEven(node* &top){
 int main(){
     int n;
     cin>>n;
-    node* top==NULL;
+    node* top=NULL;
+    int value;
     for(int i=0;i<n;i++){
         cin>>value;
         push(top,value);
