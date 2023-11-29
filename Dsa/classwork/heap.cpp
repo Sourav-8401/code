@@ -37,13 +37,11 @@ void minheap(int a[], int n, int i){
     }
 }
 void buildheapmin(int a[], int n){
-
     for(int i= (n/2)-1; i>=0; i--){
         minheap(a,n,i);
     }
 }
 void buildheapmax(int a[], int n){
-
     for(int i= (n/2)-1; i>=0; i--){
         maxheap(a,n,i);
     }

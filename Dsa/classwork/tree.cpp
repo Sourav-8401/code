@@ -97,7 +97,7 @@ public:
             return root;
         }
         if(root->data==val){
-
+            
         }
         else if(val<root->data){
             root->left = deletenode(root->left,val);
