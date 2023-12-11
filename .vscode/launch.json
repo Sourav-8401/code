@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/sem3/code/Dsa/practice",
-      "program": "d:/sem3/code/Dsa/practice/build/Debug/outDebug",
+      "cwd": "d:/sem3/code/Dsa/Daily_practice",
+      "program": "d:/sem3/code/Dsa/Daily_practice/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -31,6 +31,8 @@ var reviews = [
 var you = {
     username: 'Sourav',
     returning: true,
+    home: ['hekk', 'onam', 'kapoor', 'sitaro'],
+    random: ['omar', 12, 2],
 };
 function returningBack(returning, u1) {
     if (returning) {

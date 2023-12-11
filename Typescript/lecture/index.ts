@@ -8,7 +8,7 @@ const reviewDisplay = document.querySelector('#display')
 const addN = document.querySelector('#add')
 const user = document.querySelector('#user')
 const back = document.querySelector('#returning-user')
-const reviews = [
+const reviews: { name: string; stars: number; loyaltyUser: boolean; date: string; }[] = [
     {
         name: 'Sheia',
         stars: 5,
@@ -30,13 +30,15 @@ const reviews = [
 ]
 
 //Returning function " Welcome back booby"
-const you : {username: string; returning: boolean;} = {
-    username : 'Sourav',
-    returning : true,
+const you: { username: string; returning: boolean; home: string[]; random: (string | number)[] } = {
+    username: 'Sourav',
+    returning: true,
+    home: ['hekk', 'onam', 'kapoor', 'sitaro'],
+    random: ['omar', 12, 2],
 }
 
-function returningBack(returning : boolean, u1 : string){
-    if(returning){
+function returningBack(returning: boolean, u1: string) {
+    if (returning) {
         back.innerHTML = ' Back '
     }
     user.innerHTML = u1
@@ -49,21 +51,54 @@ returningBack(you.returning, you.username)
 
 
 // Solution
-function showReviewTotal (value : number, reviewer: string, loyal: boolean) {
+function showReviewTotal(value: number, reviewer: string, loyal: boolean) {
     let loyalty
-    if(loyal){
+    if (loyal) {
         loyalty = '⭐'
     }
     reviewTotalDisplay.innerHTML = 'review total ' + value.toString() + '| last reviewed by ' + reviewer + loyalty
 }
 
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
-function DisplayEle(name: string, stars: number, user: boolean, date: string){
-    reviewDisplay.innerHTML = 'Name: ' + name + ' stars: '+ stars + ' User: ' + user + ' Date: ' + date 
+function DisplayEle(name: string, stars: number, user: boolean, date: string) {
+    reviewDisplay.innerHTML = 'Name: ' + name + ' stars: ' + stars + ' User: ' + user + ' Date: ' + date
 }
-DisplayEle(reviews[0].name,reviews[0].stars,reviews[0].loyaltyUser,reviews[0].date)
+DisplayEle(reviews[0].name, reviews[0].stars, reviews[0].loyaltyUser, reviews[0].date)
 
-function addNumber(a: number, b: number){
-    addN.innerHTML = (a + b).toString() 
+function addNumber(a: number, b: number) {
+    addN.innerHTML = (a + b).toString()
 }
-addNumber(5,6)
+addNumber(5, 6)
+
+const given: { title: string; price: number; address: string; city: string; pincode: number; country: string; contact: number; available: boolean; }[] = [
+    {
+        title: 'hello',
+        price: 55,
+        address: 'XSf',
+        city: 'gaya',
+        pincode: 8203001,
+        country: 'India',
+        contact: 8409558239,
+        available: true,
+    },
+    {
+        title: 'hello',
+        price: 55,
+        address: 'XSf',
+        city: 'gaya',
+        pincode: 8203001,
+        country: 'India',
+        contact: 8409558239,
+        available: true,
+    },
+    {
+        title: 'hello',
+        price: 55,
+        address: 'XSf',
+        city: 'gaya',
+        pincode: 8203001,
+        country: 'India',
+        contact: 8409558239,
+        available: true,
+    }
+]

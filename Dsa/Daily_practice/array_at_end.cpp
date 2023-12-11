@@ -17,7 +17,9 @@ node* at_end(node* &head,int data){
         return head;
     }
     else{
-        while(last->next != NULL)
+        while(last->next != NULL){
+            last = last->next;
+        }
         last->next = newnode;
     }
 }
