@@ -58,3 +58,35 @@ function addNumber(a, b) {
     addN.innerHTML = (a + b).toString();
 }
 addNumber(5, 6);
+var given = [
+    {
+        title: 'hello',
+        price: 55,
+        address: 'XSf',
+        city: 'gaya',
+        pincode: 8203001,
+        country: 'India',
+        contact: 8409558239,
+        available: true,
+    },
+    {
+        title: 'hello',
+        price: 55,
+        address: 'XSf',
+        city: 'gaya',
+        pincode: 8203001,
+        country: 'India',
+        contact: 8409558239,
+        available: true,
+    },
+    {
+        title: 'hello',
+        price: 55,
+        address: 'XSf',
+        city: 'gaya',
+        pincode: 8203001,
+        country: 'India',
+        contact: 8409558239,
+        available: true,
+    }
+];
