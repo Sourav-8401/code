@@ -1,0 +1,38 @@
+These all are written in gitbash
+
+
+step to add new file in git:
+1. make new file : mkdir newfile
+2. cd newfile
+3. git init
+4. touch index.html
+5. git add index.html  --- for all file together: git add -f
+6. git status / summaryview : git status -s
+7. git commit -m 'adding new file' ---for all: git commit -a -m "your message""
+
+
+8.for undo wrong changes: git checkout -f (for all file)
+9.for checking changes from old file to new file: git diff --staged
+10.for checking changes from old file to new file: git diff
+11.to come back from staging area: git rm --cached index.html
+12.to checking changes: git log -p -1
+
+	13.for ignoring unwanted file from commiting :
+		# make new .gitignore file in bashcmd
+		#add filename in gitignore file : mylogs.log
+		#ignoring a folder: foldername/
+		#ignor all file with same extension: *.log
+
+---- new file commited to git only ----
+
+
+
+cmd helpfull commands:
+1.change c drive to d drive : cd d:
+2.enter dir : cd filename
+3.back : cd ..
+4.view dir/folder : dir
+5.view all files : ls
+6.make new file: touch filename
+7.deleting a file: git rm index.html / rm index.html
+8. quit : q

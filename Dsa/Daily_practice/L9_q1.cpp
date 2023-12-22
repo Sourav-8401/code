@@ -22,7 +22,6 @@ void insert(node* &head,int data){
     temp->next = newnode;}
 }
 void reverse(node* &main){
-    node** add_main = &main;
     node* prev = nullptr;
     node* curr = main;
     node* nxt = nullptr;
@@ -34,81 +33,24 @@ void reverse(node* &main){
     }
     main = prev;
 }
-// void reverse(node* &head){
-//     node* temp1 = head;
-//     node* temp2 = head->next;
-//     node* temp3 = temp2->next;
-//     int flag = 0;
-//     while(temp2 != NULL){
-//         temp2->next = temp1;
-//         if(flag ==0){
-//             temp1->next = NULL;
-//             flag++;
-//         }
-//         temp1 = temp2;
-//         temp2 = temp3;
-//         // if(temp3 != NULL){
-//         temp3 = temp3->next;
-//         // }
-//     }
-//     head = temp1;
-//     cout<<"head data:"<<head->data<<endl; 
-// }
-// void reverse(node* &head){
-//     node* temp1 = head;
-//     node* temp2 = head->next;
-//     node* temp3;
-//     int flag = 0;
-//     while(temp2 != NULL){
-//         temp3 = temp2->next;
-//         temp2->next = temp1;
-//         if(flag ==0){
-//             temp1->next = NULL;
-//             flag++;
-//         }
-//         temp1 = temp2;
-//         temp2 = temp3;
-//     }
-//     head = temp1;
-//     cout<<"head data:"<<head->data<<endl; 
-// }
-// void reverse(node* &head){
-//     node* temp1 = head;
-//     node* temp2 = head->next;
-//     node* temp3 = nullptr; // Initialize temp3 to nullptr
-//     int flag = 0;
-    
-//     while(temp2 != NULL){
-//         temp3 = temp2->next; // Move this line inside the loop
-//         temp2->next = temp1;
+void add(node* &head){
+    reverse(head);
+    int c = 1;
+    int sum;
+    node* temp = head;
+    while(temp != NULL){
+        sum = temp->data + c;
+        temp->data = sum % 10;
+        c = sum / 10;
+        if(c==0){break;};
+        temp = temp->next;
+    }
+    if(c !=0){
+        node* newnode = new node(c);
         
-//         if(flag == 0){
-//             temp1->next = NULL;
-//             flag++;
-//         }
-        
-//         temp1 = temp2;
-//         temp2 = temp3;
-//     }
-    
-//     head = temp1; // Set head to temp1, not temp2
-//     cout << "head data: " << head->data << endl;
-// }
-
-// void reverse(node* &head){
-//     node* temp1 = NULL;
-//     node* temp2 = head;
-//     node* temp3 = NULL;
-//     while(temp2 != NULL){
-//         temp3 = temp2->next;
-//         temp2->next = temp1;
-//         temp1 = temp2;
-//         temp2 = temp3;
-//     }
-//     head = temp1;
-//     cout<<"head data:"<<head->data<<endl;
-    
-// }
+    }
+    reverse(head);
+}
 void display(node* head){
     node* temp = head;
     while(temp!=NULL){
@@ -127,20 +69,6 @@ int main(){
         insert(head,data);
     }
     display(head);
-    node** add_head =  &head;
-    reverse(head);
+    add(head);
     display(head);
-}
-
-
-
-
-
-
-
-
-
-
-void reverse(node* &main){
-    
 }
