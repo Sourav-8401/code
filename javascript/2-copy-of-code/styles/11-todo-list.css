@@ -1,5 +1,7 @@
 body {
-  font-family: Arial;
+   font-family: 'Open Sans', sans-serif;
+  background-color: rgb(19, 26, 36);
+  color: white;
 }
 
 .todo-grid,

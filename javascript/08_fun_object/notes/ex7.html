@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greet(name){
+            if(name){
+                console.log(`Hello ${name}`);
+            }
+            else{
+                console.log(`Hi there!`);
+            }
+        }
+        function tofarenheit(celcius){
+            let farenheit = (celcius * (9/5)) + 32;
+            console.log(`Farenheit is ${farenheit}F`);
+        }
+        function tocelcius(faren){
+            let celcius = (faren - 32) * (5/9);
+            console.log(`celcius is ${celcius}C`);
+        }
+        function convertTem(tem, sign){
+            if(sign === 'c'){
+                tofarenheit(tem);
+            }else{
+                tocelcius(tem);
+            }
+        }
+        tocelcius(86);
+        tofarenheit(25);
+        convertTem(25,'c');
+        greet();
+        greet('simon');
+    </script>
+</body>
+</html>

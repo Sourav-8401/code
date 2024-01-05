@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="display('head')">heads</button>
+    <button onclick="display('tail')">tails</button>
+    <br>
+    <p>You choose: <span class="res"></span></p>
+    <script>
+        function display(choice){
+            document.querySelector('.res').innerHTML = choice;
+        }
+    </script>
+</body>
+</html>

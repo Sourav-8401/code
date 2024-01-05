@@ -3,12 +3,13 @@
 // if isLoggedIn is true, or the you object has Permissions. (all permissions should work)
 // 2. See what happens when a null object to be passed to the you objects permissions.
 
-import { showReviewTotal, populateUser } from './utils'
-import { Permissions , LoyaltyUser } from './enums'
+// import { showReviewTotal, populateUser } from './utils'
+// import { Permissions , LoyaltyUser } from './enums'
+import { Price , Country } from "./types";
 const propertyContainer = document.querySelector('.properties')
 const footer = document.querySelector('.footer')
 
-let isLoggedIn: boolean
+let isLoggedIn: boolean;
 
 // Reviews
 const reviews : any[] = [
@@ -47,12 +48,12 @@ const you = {
 const properties : {
     image: string;
     title: string;
-    price: number;
+    price: Price;
     location: {
         firstLine: string;
         city: string;
         code: number;
-        country: string;
+        country: Country;//
     };
     contact: [ number, string ];
     isAvailable: boolean;
@@ -65,7 +66,7 @@ const properties : {
             firstLine: 'shack 37',
             city: 'Bogota',
             code: 45632,
-            country: 'Colombia'
+            country: 'Columbia'
         },
         contact: [+112343823978921, 'marywinkle@gmail.com'],
         isAvailable: true  
@@ -73,12 +74,12 @@ const properties : {
     {
         image: 'images/poland-property.jpg',
         title: 'Polish Cottage',
-        price: 34,
+        price: 25,
         location: {
             firstLine: 'no 23',
             city: 'Gdansk',
             code: 343903,
-            country: 'Poland'
+            country: 'India'
         },
         contact: [+1298239028490830, 'garydavis@hotmail.com'],
         isAvailable: false 
@@ -86,12 +87,12 @@ const properties : {
     {
         image: 'images/london-property.jpg',
         title: 'London Flat',
-        price: 23,
+        price: 30,
         location: {
             firstLine: 'flat 15',
             city: 'London',
             code: 35433,
-            country: 'United Kingdom',
+            country: 'India',
         },
         contact: [+34829374892553, 'andyluger@aol.com'],
         isAvailable: true

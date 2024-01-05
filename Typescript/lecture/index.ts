@@ -3,6 +3,9 @@
 // making sure to assign a type to the parameter, to prevent unwanted behaviour.
 // : string
 
+
+import {showReviewTotal, DisplayEle, returningBack} from './utils';
+
 const reviewTotalDisplay = document.querySelector('#reviews')
 const reviewDisplay = document.querySelector('#display')
 const addN = document.querySelector('#add')
@@ -37,35 +40,15 @@ const you: { username: string; returning: boolean; home: string[]; random: (stri
     random: ['omar', 12, 2],
 }
 
-function returningBack(returning: boolean, u1: string) {
-    if (returning) {
-        back.innerHTML = ' Back '
-    }
-    user.innerHTML = u1
-
-}
 
 returningBack(you.returning, you.username)
 
-
-
-
-// Solution
-function showReviewTotal(value: number, reviewer: string, loyal: boolean) {
-    let loyalty
-    if (loyal) {
-        loyalty = '⭐'
-    }
-    reviewTotalDisplay.innerHTML = 'review total ' + value.toString() + '| last reviewed by ' + reviewer + loyalty
-}
-
-showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
-function DisplayEle(name: string, stars: number, user: boolean, date: string) {
-    reviewDisplay.innerHTML = 'Name: ' + name + ' stars: ' + stars + ' User: ' + user + ' Date: ' + date
-}
 DisplayEle(reviews[0].name, reviews[0].stars, reviews[0].loyaltyUser, reviews[0].date)
 
-function addNumber(a: number, b: number) {
+showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser)
+
+// fun            var:type   var:type   : fun return type
+function addNumber(a: number, b: number): void {
     addN.innerHTML = (a + b).toString()
 }
 addNumber(5, 6)

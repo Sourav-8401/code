@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array and loop</title>
+    <style>
+        body{
+            font-family: 'Open Sans', sans-serif;
+            background-color: rgb(19, 26, 36);
+            color: white;
+            padding: 4rem;
+        }
+        .showList{ 
+            display: grid;
+            grid-template-columns: 200px 100px;
+            column-gap: 10px;
+            row-gap: 10px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>To Do List :</h2>
+    <input type="text" onkeydown="enterHandler(event)" class="js-getTask">
+    <button onclick="createList() ">Add</button>
+    <button onclick="resetList()">Reset</button>
+    <div class="js-showList showList"></div>  
+    <script>
+        
+        //----------------BASICS OF ARRAY------------------------------------
+        
+        
+        myarray = [12, 11, 4, 'ass', 'hello', {name: 'sourav'}];
+        console.log(myarray);
+        console.log(myarray[1]);
+        console.log(myarray.length);
+        console.log(Array.isArray(myarray));
+        myarray.push(11);
+        console.log(myarray);
+        myarray.splice(0,2) //it will remove 2 values starting from 0 index;
+
+        
+        //----------------PROJECT---------------------------------------------------
+        
+        
+
+        // 1.A TO DO LIST : it will add task to your array
+        // algo: let a list : array1 = [ wake up , to bursh , take bath, take breakfast]
+        
+        let taskList = [];
+        function enterHandler(event){
+            if(event.key === 'Enter'){
+                createList();
+            }
+        }
+        function showList(){
+            let showEachTask = '';
+            const show = document.querySelector('.js-showList');
+            for(let i=0; i<taskList.length; i++){
+                showEachTask += (`<p>${i+1}.${taskList[i]}</p>
+                                <button onclick="taskList.splice(${i},1);
+                                showList()">Done</button>`);
+            }
+            show.innerHTML = showEachTask;
+        }
+        function createList(){
+            let task = document.querySelector('.js-getTask');
+            const name = task.value;
+            taskList.push(name);
+            task.value = '';
+            showList();
+        }
+        function deleteList(){
+            const lastIndex= taskList.length - 1;
+            taskList.splice(lastIndex, 1);
+            showList();
+        }
+        function resetList(){
+            const len= taskList.length;
+            taskList.splice(0,len);
+            showList(); 
+        }
+//---------------------------------------------------------------------------------
+    </script>
+</body>
+</html>
