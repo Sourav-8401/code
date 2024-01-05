@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Functions</title>
+</head>
+<body>
+
+    
+    <script>
+        const num = 2;
+        const function1 = function greeting(){
+            console.log('hello2');
+        }
+        const obj1 = {
+            num:2,
+            fun: function(){        //we don't need any name for the fun, we can use it anonymously.
+                console.log('hello3');
+            }
+        }
+        obj1.fun();
+
+        function display(param){
+            console.log(param);
+        }
+        display(2);
+
+        //passing a funtion into another function : passed fun called callback fun
+        function run(param){
+            param();
+        }
+        run(function(){
+            console.log('hello4');
+        },3000);
+
+        //5//
+        setTimeout(function(){
+            console.log('timeout');
+        },);
+    </script>
+
+
+
+
+<!-- 
+    going to learn :: Functions are also value;
+                        1.we can save function into var
+                        2.we can save funtion inside an obj
+                        3.method : fun saved inside an obj
+                        4.we can also pass a funtion inside any function as parameter.
+                        5.settimeout: it allow fun to run with some delay or in further future.
+                         --1.param: fun that would run with delay  SETTIMEOUT(FUNCTION_NAME, TIME IN MILISEC);
+                         --2.How long to wait before runnning this function:
+                                                                    (a number in millisec) 1000 milisec = 1sec
+                        6.Asynchronous code:won't wait for a line to finish 
+                                            before going to the next line  
+                        7.synchronous code: will wait for one line to finish before going to the 
+                                            the next line
+                        ****JAVASCRIPT IS SYNCHRONOUS, BLOCKING, SINGLE-THREADED******
+                        8.SetInterval(): run in interval, like every 3sec.
+                                        setinterval(function, time)
+ -->                        
+</body>
+</html>
+
