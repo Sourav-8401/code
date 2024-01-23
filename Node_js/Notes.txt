@@ -1,0 +1,22 @@
+#npm init: to create package.json file
+    entry point: index.js
+#REPL: run directly in console
+#to install module: npm install -D(dependies -save-dev) nodemon 
+#Need not to keep module folder
+    =it can get install by => npm install
+#to run: node filename
+#documentation: nodejs.org
+
+********************************************************************************
+
+
+#const path = require('path')
+#module.export = person;
+
+#const person = require('./person');
+#const person1 = new person('johnDev', 30);
+person1.greeting();
+
+***************************************************************************
+module wrapper func:
+(function(export,require, module, __filename, __dirname){})
