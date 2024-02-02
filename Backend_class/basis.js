@@ -62,5 +62,15 @@ bodyElement.backgroundColor = '#00002c';
 bodyElement.color = '#fff';
 bodyElement.display = 'flex';
 bodyElement.flexDirection = 'column';
-bodyElement.justifyContent = 'center';
 
+let fruits = ['Banana', 'Apple', 'Orange', 'Mango'];
+let flen = fruits.length;
+let showFruits = "";
+for(let k =0; k<flen; k++){
+    showFruits += `<li>${fruits[k]}</li>`;
+    console.log(showFruits);
+}
+bodyElement.justifyContent = 'center';
+document.querySelector(".fruitsList").innerHTML = showFruits;
+const concateList = cars.concat(fruits);
+document.querySelector(".showConcate").innerHTML = concateList;

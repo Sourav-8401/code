@@ -1,0 +1,6 @@
+install mongodb from mongodb websites
+install mongoose : npm i mongoose
+require mongoose;
+mongoose.connect("mongodb://127.0.0.1:27017/practiceKaro");
+make schema
+create model and export
