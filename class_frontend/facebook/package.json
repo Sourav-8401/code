@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  },
+  "name": "facebook",
+  "version": "1.0.0",
+  "description": "This is the facebook site",
+  "main": "index.js",
+  "scripts": {
+    "start": "node script",
+    "dev": "nodemon script"
+  },
+  "author": "",
+  "license": "ISC"
+}

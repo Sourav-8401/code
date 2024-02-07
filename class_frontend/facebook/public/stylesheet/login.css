@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+p.belowLogo {
+    font-size: 24px;
+    line-height: 28px;
+    width: auto;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+.logo {
+    text-align: center;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.svgLogo {
+    width: 320px;
+    height: 106px;
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55vw;
+    height: 53vh;
+    margin: 55px 0px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 14px 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+.line{
+    border: 1px solid #a7aaaf63;
+    margin:20px 0p;
+    width: 100%;
+    margin: 20px 0px;
+}
+button.create {
+    background-color: #3db824;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    justify-content: center;
+}
+.create :hover{
+    background-color: #33981f;
+    
+}
+.loginButton {
+    background-color: #2d83f3;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 22px;
+    height: fit-content;
+    margin: 15px 0;
+    font-weight: 700;
+    /* min-width: 184px; */
+    border-radius: 10px;
+    padding: 14px;
+    cursor: pointer;
+}
+
+input{
+    margin: 6px 0px;
+    min-width: -webkit-fill-available;
+    font-size: 17px;
+    color: #000000c2;
+    border: 1px solid #a7aaaf63;
+    height: 4.5vh;
+    padding: 10px;
+    border-radius: 6px;
+}
+input::placeholder{
+    color: #818487e0;
+    font-size: 17px;
+}
+input:focus{
+    outline: 2px groove #00a2ff;
+
+}
+a:active{
+    color:rgb(81, 173, 234);
+}
+a:hover{
+    text-decoration: underline;
+}
+#loginCheck{
+    color: #ed740c;
+    margin-top: 2px ;
+}
+.belowAuth{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+.belowAuth span{
+    font-weight: 500;
+
+}
+
+@media (min-width: 900px){
+    .main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 10vh;
+    }
+    .auth{
+        width: 27vw;
+    }
+    .belowAuth{
+        text-align: center;
+    }
+    .logo{
+        float: left;
+        text-align: left;
+    }
+    .svgLogo{
+        position: relative;
+        left: -33px;
+    }
+}
