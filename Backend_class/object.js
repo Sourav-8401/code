@@ -22,3 +22,14 @@ const book = {
 console.log(student);
 console.log(book.showDetail());
 
+let myObj = {
+    name: "data",
+    myfun: function sum(a, b) { return a + b; },
+    class: "10",
+    age: "20",
+};
+
+// Loop through the keys of the object and print each key-value pair
+for (let key in myObj) {
+    console.log(key + ": " + myObj[key]);
+}

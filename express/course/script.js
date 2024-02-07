@@ -15,5 +15,5 @@ app.get("/profile/:username", function(req, res){
     res.render("about", {username: req.params.username});
 });
 
-
-app.listen(5001 , ()=> {console.log("server is running on PORT: 5000")});
+const PORT = 5001;
+app.listen(PORT , ()=> {console.log(`server is running on PORT: ${PORT}`)});
