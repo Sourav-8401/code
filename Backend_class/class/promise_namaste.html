@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const cart = ["shoes", "pants", "kurtas"];
+        //Writing the promise finally that createOrder will return:
+//********************creation of a new promise***********************************************************
+        function createOrder(cart) {
+            const pr = new Promise(function (resolve, reject) {
+                //reject
+                if (!validateCart(cart)) {
+                    const err = new Error("Cart is not valid");
+                    reject(err);
+                }
+                //resolve
+                const orderID = "12212";
+                if (orderID) {
+                    resolve(orderID);
+                }
+             }
+            );
+            return pr;
+        }
+//********************creating 2nd promise***********************************************************
+        function proceedToPayment(){
+            return new Promise(
+                function(resolve,reject){
+                    resolve("Payment Successful");
+                }
+            )
+        }
+        
+        function validateCart(cart){return true;}
+
+
+//********************initialization of promise(basic_me)***********************************************************
+         //this returns a promise: respose.json, reject.json
+         const pr1 = createOrder(cart);
+         console.log(pr1);
+ 
+         // when promise obj{} get filled it will transfer the obj to .then fun;
+         pr1
+          .then(function (orderID) {
+             console.log(orderID);
+          })
+          .catch(function(err){
+            console.log(err.message);
+          })
+
+//********************initialization of promise(2nd method)***********************************************************
+
+          createOrder(cart)
+            .then(function(orderID){
+                console.log(orderID);
+                return orderID;
+            })
+            .catch(function(err){
+                console.log(err);
+            })
+            .then({function(order){
+                return proceedToPayment(order);
+            }
+            })
+        console.log(pr1);
+    </script>
+</body>
+
+</html>
