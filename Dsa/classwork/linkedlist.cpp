@@ -74,25 +74,3 @@ void deletenode(int pos, node* &head){
     delete curr;
     }
 }
-
-int main()
-{
-    node *node1 = new node(1);
-    node* head = node1;
-    node* tail = node1;
-    print(head);
-    inserthead(head,20);
-    inserthead(head,30);
-    inserthead(head,40);
-    inserthead(head,50);
-    print(head);
-    insertend(tail, 25);
-    insertend(tail, 55);
-    insertend(tail, 28);
-    print(head);
-    givenposition(head,2,66);
-    print(head);
-    givenposition(head,10,63);
-    print(head);
-    
-}

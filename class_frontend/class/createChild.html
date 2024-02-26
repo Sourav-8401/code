@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Adding new element using create and append</h2>
+    <script>
+        let e1 = document.createElement('p');
+        let text = document.createTextNode("how are you");
+        console.log(e1);
+        console.log(text);
+        e1.appendChild(text);
+        document.body.appendChild(e1);
+        //e1.remove();
+    </script>
+
+    <h3>Adding elements to parent element</h3>
+    <div id="one">
+        <p>HEllO</p>
+    </div>
+    <script>
+        let e2 = document.createElement('p');
+        let text1 = document.createTextNode("World!");
+        let parent = document.getElementById("one");
+        e2.appendChild(text1);
+        parent.appendChild(e2);
+    </script>
+    <h3>Insert element specified position in parent using InsertBe</h3>
+    <div id="two">
+        <p id="p1">Welcome</p>
+        <p id="p2">to the</p>
+        <p id="p3">INT219</p>
+    </div>
+    <script>
+        let e3 = document.createElement('p');
+        let text2 = document.createTextNode('class of');
+        e3.appendChild(text2);
+        let parent2 = document.getElementById("two");
+        let child2 = document.getElementById("p3");
+        parent2.insertBefore(e3,child2);
+    </script>
+
+    <h3>add HTML content directy using the innerHTML</h3>
+    <div id="three">
+        <p>Hello</p>
+    </div>
+
+    <script>
+        let parent4 = document.getElementById("three");
+    </script>
+    <h3>add HTML content specified position relative to the element</h3>
+    <div id="four">
+        <p>Welcome</p>
+    </div>
+    <script>
+        let parent5 = document.getElementById('four');
+        let child3 = document.createElement('p');
+        parent.insertAdjacentHTML('beforeend','<p>New content</p>');
+    </script>
+
+</body>
+</html>

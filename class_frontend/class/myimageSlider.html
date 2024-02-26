@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tnail{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .tnail img{
+            width: 100px;
+            height: 100px;
+            margin:10px;
+        }
+        .main_img{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+       <center> <img class="main_img" src="./01.jpg" alt="main1"></center>
+    
+    <div class="tnail">
+        <img src="./01.jpg" alt="img" onclick="change('./01.jpg')">
+        <img src="./02.jpg" alt="img" onclick="change('./02.jpg')">
+        <img src="./03.jpg" alt="img" onclick="change('./03.jpg')">
+        <img src="./09.jpg" alt="img" onclick="change('./09.jpg')">
+    </div>
+
+    <script>
+        const mainImg = document.querySelector('.main_img');
+        function change(curUrl){
+            mainImg.src = curUrl;
+        }
+    </script>
+</body>
+</html>

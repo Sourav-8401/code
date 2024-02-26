@@ -1,25 +1,26 @@
 const express = require('express');
-const body = require('body-parser');
+const bodyParser = require('body-parser');
 const app = express();
 
 // app.get("/", function(req, res){
-//     res.render("index", {age: 12});
+//     res.send("index", {age: 12});
 // });
-app.use(app.json())
-app.get(
-    "/", (req, res)=>{
-        res.send("index");
-    }
-)
+app.use(express.json())
+app.get('/',(req,res)=>{
+    res.send('<b>Hi there</b>');
+})
 app.post(
     '/my-message', 
     (req, res)=>{
-        const mes = req.body.message;
+        const mes = req.body;
         console.log(mes);
         res.json(
-            {output : "2+2 = 4",
+            {output : "4+5=10",
         }
         )
+        const quer_mes = req.query.message;
+        console.log(quer_mes);
+        console.log(req.headers.authorization);
     }
 )
 

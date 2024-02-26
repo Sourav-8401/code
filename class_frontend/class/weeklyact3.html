@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This is before text</p>
+    <button>change</button>
+    <p></p>
+    <script>
+       const pr = document.getElementsByTagName('p');
+       const change = ()=>{
+           pr[0].innerHTML = "hello changed";
+           pr[1].innerHTML = "This is 2nd changed";
+           const myStyle = document.body.style;
+           myStyle.backgroundColor = '#00002c';
+           myStyle.color = '#fff';
+
+       };
+       document.getElementsByTagName('button')[0].onclick = change;
+    </script>
+</body>
+</html>

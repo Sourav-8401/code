@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid green;
+            width: 200px;
+            height:100px ;
+            margin: 5px;
+            text-align: center;
+        }
+        span{
+            border: 2px solid green;
+            width: 100px;
+            height:50px ;
+            margin: 5px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="d1">This is div<span id="s1">This is span</spans></div>
+    <div id="d2">This is div<span id="s2">This is span</spans></div>
+    <script>
+       document.querySelector('#d1').addEventListener('dblclick',()=>{alert("This is d1");});
+       document.querySelector('#s1').addEventListener('dblclick',()=>{alert("This is d1");});
+       document.querySelector('#d2').addEventListener('dblclick',()=>{alert("This is d1");});
+       document.querySelector('#s2').addEventListener('dblclick',()=>{alert("This is d1");});
+    </script>
+</body>
+</html>
