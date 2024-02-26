@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="fun2()">open</button>
+    <button onclick="con()">click</button>
+    <script src="./push_pop.js"></script> -->
+        <!-- <button onclick="backchodi()">click 
+        </button> -->
+        <button >Change</button>
+        <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dicta suscipit nulla 
+            esse corrupti ex, similique, beatae est quaerat provident perspiciatis harum 
+            iste dolorum amet nisi possimus temporibus tempora cupiditate.</pre>
+
+
+        <form action="#">
+        <label for="name">Password</label>
+        <input type="text" id="name">
+        <input type="submit" id="submit">
+        </form>
+    <script>
+        count =0;
+            // setTimeout(()=>{
+             //   alert("This is a alert");
+           // },5000);
+       /** const toShow = document.querySelector('p');
+        toShow.innerHTML = count;
+        setInterval(()=>{
+            count++;
+            toShow.innerHTML = count;
+        },1000)*/
+        let flag = 0;
+        function change(){
+            const para = document.querySelector("pre");
+            para.style.backgroundColor = "#2c2c2c";
+            para.innerHTML = "This is another content";
+            para.style.color = "#fff";
+            flag++; 
+        }
+        document.querySelector("button").addEventListener("click",()=>{
+            auto();
+        })
+        function change2(){
+            const para = document.querySelector("pre");
+            para.style.backgroundColor = "#fff";
+            para.innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Odit dicta suscipit nulla esse corrupti ex, similique, beatae est quaerat provident perspiciatis <br>harum iste dolorum amet nisi possimus temporibus tempora cupiditate.";
+            para.style.color = "#000";
+            flag--; 
+        }
+        function auto(){
+            if(flag === 0){
+                change();
+            }else{
+                change2();
+            }
+        }
+        function formValidation(){
+            const myInput = document.querySelector('#name')
+            const validate = myInput.value;
+            console.log(validate);
+            let charValidate = ['!','@','#','&','%'];
+            if(validate = ""){
+                alert("This should not be empty");
+            }
+            if(validate.length<8){
+                alert("length should be greater than 8");
+            }
+            let i =0;
+            let charFound = 0;
+            const validatArr =  validate.split("");
+            while(i<charValidate.length){
+                if(validate.includes(charValidate[i])){
+                    charFound++;
+                };
+                i++;
+            }
+            if(charFound==0){
+                alert("It must include '@#$%&'");
+            }
+        }
+        document.querySelector('#submit').addEventListener('click',()=>{
+            formValidation();
+        })
+
+    </script>
+</body>
+</html>

@@ -87,7 +87,4 @@ int main()
     cout<<"\n"<<num3[(n/2)]<<endl;
     vector<int> num4;
 
-    if(!num4){
-        
-    }
 }

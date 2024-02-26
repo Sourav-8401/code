@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 node_modules/
 .vscode/
 package.json/
 package-lock.json/
-=======
-node_modules
-.vscode/
->>>>>>> 1e6549837b13bdb83b7be50d5c7dd7b76252bbfc

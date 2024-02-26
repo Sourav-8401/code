@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function getData() {
+            let a = 5;
+            let b = 10;
+            //let res = [a,b];
+            return res;
+        }
+        function sum(n1, n2) {
+            return n1 + n2;
+        }
+        function sub(n1, n2) {
+            return n1 - n2;
+        }
+        function divide(n1, n2) {
+            return new Promise(function (resolve, reject) {
+                if (n2 == 0) {
+                    const err = new Error("Not divisible by zero");
+                    reject(err);
+                }
+                setTimeout(function () {
+                    resolve(n1 / n2);
+                }, 2000);
+            })
+        }
+        function start() {
+            const pr = new Promise(
+                function (resolve, reject) {
+                    // let data = getData();
+                    // a = data[0];
+                    // b = data[1];
+                    setTimeout(function () {
+                        let ans = sum(10, 15);
+                        resolve(ans);
+                    }, 5000);
+                }
+            )
+            return pr;
+        }
+        const promise = start();
+        console.log(promise);
+
+        promise
+            .then(function (ans) {
+                console.log("ans of sum: " + ans);
+                return ans;
+            })
+            .then(function (n1) {
+                let ans;
+                ans = sub(n1, 40);
+                console.log("Ans of sub: " + ans + "\n");
+                return ans;
+            })
+            .then(function (n1) {
+                let n2 = 0;
+                const divAns = divide(n1, n2);
+                if(divAns){
+                    console.log("Ans of divide: " + divAns + "\n");
+                }
+                return divAns;
+            })
+            .catch(function (err) {
+                console.log("error is : " + err.message);
+            })
+        //****************************Array****************************************************************
+        let n1 = 0;
+        let n2 = 1;
+        let num = [n1, n2];
+        num[3] = 66;
+        console.log(num[0] + num[1], num[2], num[3]);
+        function get() {
+            let n3 = 12;
+            let n4 = 11;
+            let num = [n3, n4];
+            return n3, n4;
+        }
+        console.log(get());
+    </script>
+</body>
+
+</html>

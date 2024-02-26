@@ -3,6 +3,7 @@ console.log(fruits.indexOf('grapes') + fruits.indexOf('apple'));
 
 
 let fruit2 = ['Banana', 'Apple', 'Orange', 'Mango'];
+
 let flen = fruit2.length;
 let showFruits = "";
 for(let k =0; k<flen; k++){
