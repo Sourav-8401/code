@@ -43,3 +43,26 @@ const ans2 = arr2.map((i)=>{
     }
 })
 console.log(ans2)
+
+const name = ['raman','prash','chitu'];
+function filter_(ele){
+        if(ele.startsWith("r")){
+            return true;
+        }else{
+            return false;
+        }
+}
+const nameAns = name.filter(filter_);
+console.log(nameAns);
+function filterLogic(n){
+    if(n%2==0){
+        return true;
+    }else{
+        return false;
+    }
+}
+const arr5 = [1,2,4,3,5,6,7,8];
+const ans3 = arr5.filter(filterLogic);
+console.log(ans3);
+const ans6 = arr5.map(filterLogic);
+console.log(ans6);
