@@ -1,0 +1,10 @@
+Node js: Asynchronous, non-blocking, event driven, data intensive, real time operation, nosql-mongodb, Run-time environment
+        single threaded, event looping, highly scable, no buffering,
+    1.Asynchronous: running the event simultanously 
+    2.buffering : temporary storing  of data.
+    3.event-driven: run when event are called.
+    4.data-intensive:
+    5.highly-scable: we can increase the number of the user.
+    6.no-buffering: don't store the temporary data(buffer).
+    
+    

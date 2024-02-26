@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFile</title>
+</head>
+<body>
+    <center><h1>WELCOME TO MY WEBPAGE</h1></center>
+    <p>const path = require('path');
+        const fs = require('fs');
+        const http = require('http');
+        
+        const server = http.createServer(
+            (req, res) => {
+                if (req.url === '/') {
+                    fs.readFile(
+                        path.join(__dirname, 'myPublic', 'myIndex.html'),
+                        (err) => {
+                            if (err) throw err;
+                            res.writeHead(200, { 'Content-Type': 'text/html' });
+                            res.end(content);
+                            console.log(content);
+                        }
+                    );
+                }
+            }
+        );
+        const PORT = process.env.PORT || 5000;
+        
+        server.listen(PORT, () => console.log(`Server running on port ${PORT}`));</p>
+</body>
+</html>
